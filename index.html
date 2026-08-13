@@ -7,13 +7,25 @@
     <style>
 
         body {
+
+            background-color: hsl(0, 0%, 100%);
+            background-image: url("boller2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment:fixed;
+            
+            display:grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: auto;         
+        }
+
+        .Main {
             min-width: 720px;
             max-width: 2560px;
-            background-color: hsl(0, 0%, 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
-                     
         }
 
         .Header-bg {
@@ -21,12 +33,13 @@
             min-width: 720px;
             padding-right: 40px ;
             margin: 2% 1%;
-            flex-direction: column
+            flex-direction: column;
         }
 
-         .header-logo-img {
-            min-width: 720px;
-            max-width: 2560px;      
+        .header-logo-img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
         }       
 
         #Overskrift2 {
@@ -113,7 +126,10 @@
 </head>
 
 <body>
-        <article>
+
+    <div>Hei</div>
+    <div class="Main">
+<article>
             <header class="Header-bg">
               <img class="header-logo-img" src="rigmorlogo.png" alt="Rigmors Knallegode Boller">
             </header>
@@ -121,19 +137,19 @@
 
     <section class="primarycontent">  
         <div>
-         <h2 id="Overskrift2">Liste over Rigmors favoritter</h2>
-
+            <h2 id="Overskrift2">Liste over Rigmors favoritter</h2>
             <ul class="Listetekst">
-                <li>Hveteboller</li>
-                <li>Rosinboller</li>
-                <li>Sjokoladeboller</li>
-                <li>Berlinerboller</li>
+                    <li>Hveteboller</li>
+                    <li>Rosinboller</li>
+                    <li>Sjokoladeboller</li>
+                    <li>Berlinerboller</li>
             </ul>
+        </div>    
     </section>        
 
     
     <section class="primarycontent2"> 
-        </div>
+        <div>
             <img class="bolle-img" src="boller2.jpg" alt="Boller2">
                 <p font-size: 30px; class="Listetekst">Enkelt bolle - 9.99,- 
                     <select> 
@@ -159,9 +175,11 @@
        </div>
     </section>
 
-    <div> 
-        <p class="Listetekst3"> 2026 RIGMORS AS - Bollegata 4 - 9999 Bollestad</p>
-    </div>    
+        <p class="Listetekst3"> 2026 RIGMORS AS - Bollegata 4 - 9999 Bollestad</p>  
+    </div>
+    <div>hallo</div>
+
+        
 
     <script>
         function Purchased() { 
