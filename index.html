@@ -7,27 +7,26 @@
     <style>
 
         body {
-            min-width: 600px;
-            max-width: 3840px;
+            min-width: 720px;
+            max-width: 2560px;
             background-color: hsl(0, 0%, 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
                      
         }
 
         .Header-bg {
             background-color: hsl(0, 21%, 23%);
-            min-width: 300px;
-            max-width: 900px;
-            height: auto;
+            min-width: 720px;
             padding-right: 40px ;
-            margin: 1% 1%;
+            margin: 2% 1%;
+            flex-direction: column
         }
 
          .header-logo-img {
-            min-width: 300px;
-            max-width: 900px;
-            margin-trim: in-flow;
-            height:auto;
-            margin: 1% 1%;            
+            min-width: 720px;
+            max-width: 2560px;      
         }       
 
         #Overskrift2 {
@@ -60,6 +59,22 @@
             font-size: 15px;           
         }            
 
+        #topText {
+            text-align: center;
+            color: hsl(0, 0%, 0%);
+            font-family: Georgia, 'Times New Roman', Times, serif;   
+            font-weight: 10;
+            font-size: 30px;    
+        }  
+        
+        #TitleText {
+            text-align: center;
+            color: hsl(0, 0%, 0%);
+            font-family: Georgia, 'Times New Roman', Times, serif;   
+            font-weight: 10;
+            font-size: 30px;    
+        }         
+
         .bolle-img {
             min-width: 300px;
             max-width: 400px;
@@ -69,22 +84,30 @@
         }
 
         .primarycontent {
-            background-color: hsl(69, 23%, 65%);
-            min-width: 300px;
-            max-width: 900px;
-            height: auto;
+            background-color: hsl(59, 23%, 63%);
+            min-width: 720px;
+            max-width: 2560px;
             padding: 20px;
             margin: 1% 1%;
         }     
         
         .primarycontent2 {
-            background-color: hsl(0, 0%, 100%);
-            min-width: 300px;
-            max-width: 900px;  
-            height: auto;          
-            margin: 1% 1%;
+            background-color: hsl(59, 23%, 63%);
+            min-width: 720px;
+            max-width: 2560px;  
+            padding: 20px;  
+            padding-top: 60px; 
+            margin: 0.1% 10%;;
             text-align: center; 
         }      
+
+        #Buybutton {
+            background-color: rgb(227, 228, 197);
+            padding: 3px;
+            border: 2px solid;
+            border-radius: 15%;
+        }
+
     </style>
 
 </head>
@@ -112,7 +135,7 @@
     <section class="primarycontent2"> 
         </div>
             <img class="bolle-img" src="boller2.jpg" alt="Boller2">
-                <p font-size: 30px; class="Listetekst">Enkelt bolle 9.99,- 
+                <p font-size: 30px; class="Listetekst">Enkelt bolle - 9.99,- 
                     <select> 
                         <option>Hvetebolle</option>
                         <option>Rosinbolle</option> 
@@ -120,7 +143,7 @@
                         <option>Berlinerbolle med krem</option> 
                         <option>Berlinerbolle med bringebær</option>  
                     </select> 
-                    <button>KJØP</button>
+                    <button id="buyButton" onclick="Purchased()">Legg til handlekurv</button>
                 </p>        
             <img class="bolle-img" src="boller1.jpg" alt="Boller1">
                 <p class="Listetekst"> 5 pakning - 39.99,-
@@ -131,15 +154,26 @@
                         <option>Berlinerbolle med krem</option> 
                         <option>Berlinerbolle med bringebær</option>  
                     </select> 
-                    <button>KJØP</button>
+                    <button id="buyButton2" onclick="Purchased2()">Legg til handlekurv</button>
                 </p>  
        </div>
     </section>
 
-<div> 
-    <p class="Listetekst3">RIGMORS AS - Bollegata 4 - 9999 Bollestad</p>
-</div>    
+    <div> 
+        <p class="Listetekst3"> 2026 RIGMORS AS - Bollegata 4 - 9999 Bollestad</p>
+    </div>    
 
+    <script>
+        function Purchased() { 
+            document.getElementById("buyButton").innerHTML = "Lagt til handekurv";
+            
+       }
+
+        function Purchased2() { 
+            document.getElementById("buyButton2").innerHTML = "Lagt til handekurv";
+            
+       }       
+    </script>
 
 </body>
 </html>
